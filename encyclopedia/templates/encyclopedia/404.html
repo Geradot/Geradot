@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Page not found
+{% endblock %}
+
+{% block body %}
+<p class="PNF-title">404 Error</p>
+{% if title %}
+<p class="PNF-text">The "{{ title }}" page is not found. Try to change the request/URL or back to <a href="{% url 'index' %}">main</a> page</p>
+{% else %}
+<p class="PNF-text">The {{ requested_page }} page is not found. Try to change the request/URL or back to <a href="{% url 'index' %}">main</a> page</p>
+{% endif %}
+{% endblock %}
